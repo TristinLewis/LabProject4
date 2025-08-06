@@ -3,8 +3,7 @@
 
 
 
-Character::Character(string n, int h, int dmg)
-    : name(n), health(h), attackDamage(dmg) {
+Character::Character(const string& n, int h, int dmg, int res) : name(n), health(h), attackDamage(dmg) {
 }
 
 void Character::displayStats() const {

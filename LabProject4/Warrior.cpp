@@ -1,13 +1,11 @@
 #include "Warrior.h"
 
 
-Warrior::Warrior(string n) : Player(n, 100, 20, 100, "Energy") {
+Warrior::Warrior(const string& n) : Player(n, 100, 20, 100) {
 
     addAbility("Sword Slash");
     addAbility("Shield Bash");
     addAbility("Sword Stab");
-
-    srand(static_cast<unsigned int>(time(0)));
 }
 void Warrior::attack() {
     cout << getName() << " swings a sword causing " << getAttackDamage() << " damage." << endl;

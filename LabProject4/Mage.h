@@ -9,8 +9,10 @@
 using namespace std;
 
 class Mage : public Player {
+
+
 public:
-    Mage(string n);
+    Mage(const string& n);
 
     void attack() override;
     void useAbility() override;

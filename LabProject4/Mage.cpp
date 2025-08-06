@@ -1,18 +1,17 @@
 #include "Mage.h"
 
 
-Mage::Mage(string n) : Player(n, 100, 15, 100, "Mana") {
+Mage::Mage(const string& n) : Player (n,100, 15, 100) {
 
 
     addAbility("Fireball");
     addAbility("Ice shard");
     addAbility("Arcane cannon");
 
-    srand(static_cast<unsigned int>(time(0)));  
 }
 
 void Mage::attack() {
-    cout << getName() << " casts a spell causing " << getAttackDamage() << " damage." << endl;
+    cout << getName() << "attacks for " << getAttackDamage() << " damage." << endl;
 }
 
 void Mage::useAbility() {

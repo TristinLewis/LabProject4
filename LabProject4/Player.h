@@ -9,23 +9,22 @@ class Player : public Character {
 
 private:
     vector<string> abilities;
-    int resource;
-    string resourceType;
+    int resource; 
 
 public:
-    Player(string n, int h, int dmg, int resourceAmount, string resType);
+    Player(const string& n, int h, int dmg, int res);
 
     void addAbility(const string& ability);
+
     void attack() override;
     void useAbility() override;
     void displayStats() const override;
 
-    int getResource() const;
-    string getResourceType() const;
-    void reduceResource(int amount);
 
 
     const vector<string>& getAbilities() const; 
+    int getResource()const; 
+    void reduceResource(int amount); 
 
 };
 

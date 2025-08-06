@@ -2,13 +2,13 @@
 
 
 
-Assassin::Assassin(string n) : Player(n, 100, 25, 100, "Energy") {
+Assassin::Assassin(const string& n) : Player(n, 100, 25, 100) {
 
     addAbility("Backstab");
     addAbility("Quick strike");
     addAbility("Shadow Step");
 
-    srand(static_cast<unsigned int>(time(0))); 
+
 }
 
 void Assassin::attack() {

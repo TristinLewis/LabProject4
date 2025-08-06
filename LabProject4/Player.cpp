@@ -3,10 +3,8 @@
 
 
 
-Player::Player(string n, int h, int dmg, int resourceAmount, string resType)
-    : Character(n, h, dmg) {
-    resource = resourceAmount;
-    resourceType = resType;
+Player::Player(const string& n, int h, int dmg, int res) : Character(n, 100, 20, 20), resource(res) {
+   
 }
 void Player::addAbility(const string& ability) {
     abilities.push_back(ability);
@@ -28,7 +26,6 @@ void Player::useAbility() {
 
 void Player::displayStats() const {
     Character::displayStats();
-    cout << "Resource Type: " << resourceType << endl;
     cout << "Resource: " << resource << endl;
     cout << "Abilities: ";
     for (const auto& ability : abilities) {
@@ -40,11 +37,6 @@ void Player::displayStats() const {
 int Player::getResource() const {
     return resource;
 }
-
-string Player::getResourceType() const {
-    return resourceType;
-}
-
 void Player::reduceResource(int amount) {
     resource -= amount;
     if (resource < 0) {

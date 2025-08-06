@@ -13,7 +13,7 @@ private:
 
 public: 
 
-	Character(string n, int h, int dmg); 
+	Character(const string& n, int h, int dmg, int res); 
 
 	virtual void attack() = 0; 
 	virtual void useAbility() = 0; 

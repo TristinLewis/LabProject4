@@ -10,7 +10,7 @@ using namespace std;
 
 class Assassin : public Player {
 public:
-    Assassin(string n);
+    Assassin(const string& n);
 
     void attack() override;
     void useAbility() override;
